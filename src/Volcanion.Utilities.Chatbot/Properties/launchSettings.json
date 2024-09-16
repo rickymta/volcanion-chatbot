@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Volcanion.Utilities.Chatbot": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
