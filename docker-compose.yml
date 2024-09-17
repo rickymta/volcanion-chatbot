@@ -1,0 +1,16 @@
+services:
+  myapp-console:
+    build:
+      context: ./src
+      dockerfile: MyApp.ConsoleApp/Dockerfile
+    container_name: myapp-console-container
+    restart: always
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    depends_on:
+      - db
+    volumes:
+      - ./src:/app
+    networks:
+      - myapp-network
+    command: ["dotnet", "MyApp.ConsoleApp.dll"]
